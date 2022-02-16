@@ -24,22 +24,24 @@ function inputAutoClear() {
   food.value = "";
   rent.value = "";
   clothes.value = "";
-  Expense.innerText = '0.0';
-  balanceBeforeSaving.innerText = '0.0';
+  Expense.innerText = "0.0";
+  balanceBeforeSaving.innerText = "0.0";
 }
 
 function stringToFloat(number) {
   const result = parseFloat(number);
   if (result < 0) {
-    alert("You don't input any Negative number");
+    setTimeout(() => {
+        alert("You don't input any Negative number");
+    }, 1000);
     inputAutoClear();
   } else {
     return result;
   }
 }
 
-// calculation button event handler
-document.getElementById("calc-btn").addEventListener("click", function () {
+// calculation income and Expense here
+function calculation() {
   const incomeCost = income.value;
   const foodCost = food.value;
   const rentCost = rent.value;
@@ -55,7 +57,9 @@ document.getElementById("calc-btn").addEventListener("click", function () {
     clothesCost == null ||
     clothesCost == ""
   ) {
-    alert("Please fillup every input fild");
+    setTimeout(() => {
+        alert("Please fillup every input fild");
+    }, 1000);
     inputAutoClear();
   } else {
     let income = stringToFloat(incomeCost);
@@ -66,7 +70,9 @@ document.getElementById("calc-btn").addEventListener("click", function () {
     const remainAmount = income - totalExpense;
 
     if (totalExpense >= remainAmount) {
-      alert("Your Expense is More then income amount");
+      setTimeout(() => {
+        alert("Your Expense is More then income amount");
+      }, 1000);
       inputAutoClear();
     } else {
       Expense.innerText = totalExpense;
@@ -75,4 +81,4 @@ document.getElementById("calc-btn").addEventListener("click", function () {
 
     console.log(totalExpense, remainAmount);
   }
-});
+}
