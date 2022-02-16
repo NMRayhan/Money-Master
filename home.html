@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Pocket Assistant</title>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <!-- bootstrap css  -->
+    <link rel="stylesheet" href="assets/style/bootstrap.css">
+
+    <!-- fontawesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header part start  -->
+    <header class="bg-info">
+        <div class="container">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <a href="#home.html" class="navbar-brand fs-2 text-white">Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <dir class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h-text">
+                            <li class="nav-item ms-3"><a class="nav-link fs-4 custom-active" href="#home.html">Home</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Income</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Expense</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Savings</a></li>
+                        </ul>
+                    </dir>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- header part end -->
+
+    <main>
+        <!-- main section start-->
+        <section class="py-4 container">
+            <h3 class="text-center text-secondary">Welcome <span class="master">Master</span></h3>
+            <h2 class="text-center" style="color: tomato;">I'm your pocket assistant <i class="fa-brands fa-bitcoin"></i></h2>
+            <div id="liveAlertPlaceholder"></div>
+            <div class="row gx-5 mt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <div class="p-3 border bg-light rounded-1">
+                        <img src="assets/front-cover.jpg" alt="" class="w-100" style="height: 600px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="p-3 border bg-light rounded-1">
+                        <div class="form-group row">
+                            <div class="col-12 py-2">
+                                <h4 class="fw-bold text-center">Income</h4>
+                                <input type="number" placeholder="Income..." class="form-control" id="income-input">
+                            </div>
+                            <div class="col-12 mt-3 py-2">
+                                <h4 class="fw-bold text-center">Expense</h4>
+                                <input type="number" placeholder="Food..." class="form-control py-1" id="food-input">
+                            </div>
+                            <div class="col-12 py-2">
+                                <input type="number" placeholder="Rent..." class="form-control py-1" id="rent-input">
+                            </div>
+                            <div class="col-12 py-2">
+                                <input type="number" placeholder="Clothes..." class="form-control py-1" id="clothes-input">
+                            </div>
+                            <div class="col-12 row py-3">
+                                <div style="width: 50%; margin: auto;">
+                                    <div class="d-grid">
+                                        <button class="btn btn-success fw-bold" id="calc-btn">Calculate</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <h4 class="text-start mb-2">Total Expense : $ <span class="fw-light" id="total-expense">0.0</span> </h4>
+                                <h4 class="text-start mb-2">Balance : $ <span class="fw-light" id="first-balance">0.0</span> </h4>
+                            </div>
+                            <!-- bonus part start -->
+                            <div class="col-12 py-2 row justify-content-center">
+                                <label class="col-1 col-form-label fw-bold" for="save">Save</label>
+                                <div class="col-4">
+                                    <input type="number" name="save-input" id="save" class="form-control">
+                                </div>
+                                <div class="col-1">
+                                    <h3>%</h3>
+                                </div>
+                                <div class="col-4 row">
+                                    <div style="width: 100%; margin: auto;">
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary fw-bold" id="save-btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <h4 class="text-start mb-2">Saving Amount : $ <span class="fw-light" id="saving-amount">0.0</span> </h4>
+                                <h4 class="text-start mb-2">Remaining Balance : $ <span class="fw-light" id="second-balance">0.0</span> </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- error Swhowing section  -->
+        <section class="container">
+            
+            <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+        </section>
+        
+    </main>
+    <!-- main section end  -->
+
+    <!-- custome js  -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>
