@@ -9,7 +9,11 @@ let balanceBeforeSaving = document.getElementById("first-balance");
 // warning msg showing 
 var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
-
+function alert(message) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-danger alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+  alertPlaceholder.appendChild(wrapper)
+}
 
 function stringToFloat(number) {
   const result = parseFloat(number);
