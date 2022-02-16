@@ -116,10 +116,13 @@ function savingCalc() {
       savingPar.innerText = savingsAmount;
       balanceAfterSaving.innerText = finalBalance;
     }
-  }else{
+  } else {
     setTimeout(() => {
-        alert("Must fill-up Income and Expense field before Savings Calculation", "danger");
-      }, 500);
-      inputAutoClear();
+      alert(
+        "Must fill-up Income and Expense field before Savings Calculation",
+        "danger"
+      );
+    }, 500);
+    inputAutoClear();
   }
 }
