@@ -1,27 +1,32 @@
 /* custom css  */
-.h-text li a{
-    color: white;
+.h-text li a {
+  color: white;
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 /* google fonts  */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
-
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.custom-active{
-    color: #0A58CA !important;
+.custom-active {
+  color: #0a58ca !important;
 }
 
-.master{
-    color: firebrick;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.3em;
+.master {
+  color: firebrick;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.3em;
 }

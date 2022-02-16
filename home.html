@@ -28,9 +28,9 @@
                     <dir class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h-text">
                             <li class="nav-item ms-3"><a class="nav-link fs-4 custom-active" href="#home.html">Home</a></li>
-                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Income</a></li>
-                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Expense</a></li>
-                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="">Savings</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="#">Income</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="#">Expense</a></li>
+                            <li class="nav-item ms-3"><a class="nav-link fs-4" href="#">Savings</a></li>
                         </ul>
                     </dir>
                 </nav>
@@ -57,17 +57,25 @@
                         <div class="form-group row">
                             <div class="col-12 py-2">
                                 <h4 class="fw-bold text-center">Income</h4>
-                                <input type="number" placeholder="Income..." class="form-control" id="income-input">
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" placeholder="Income..." class="form-control" id="income-input">
+                                </div>
                             </div>
                             <div class="col-12 mt-3 py-2">
                                 <h4 class="fw-bold text-center">Expense</h4>
-                                <input type="number" placeholder="Food..." class="form-control py-1" id="food-input">
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" placeholder="Food Expense..." class="form-control py-1" id="food-input">
+                                </div>
                             </div>
-                            <div class="col-12 py-2">
-                                <input type="number" placeholder="Rent..." class="form-control py-1" id="rent-input">
+                            <div class="col-12 py-2 input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" placeholder="Rent Expense..." class="form-control py-1" id="rent-input">
                             </div>
-                            <div class="col-12 py-2">
-                                <input type="number" placeholder="Clothes..." class="form-control py-1" id="clothes-input">
+                            <div class="col-12 py-2 input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" placeholder="Clothes Expense..." class="form-control py-1" id="clothes-input">
                             </div>
                             <div class="col-12 row py-3">
                                 <div style="width: 50%; margin: auto;">
@@ -80,6 +88,7 @@
                                 <h4 class="text-start mb-2">Total Expense : $ <span class="fw-light" id="total-expense">0.0</span> </h4>
                                 <h4 class="text-start mb-2">Balance : $ <span class="fw-light" id="first-balance">0.0</span> </h4>
                             </div>
+
                             <!-- bonus part start -->
                             <div class="col-12 py-2 row justify-content-center">
                                 <label class="col-1 col-form-label fw-bold" for="save">Save</label>
@@ -96,11 +105,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 py-2">
+                                    <h4 class="text-start mb-2">Saving Amount : $ <span class="fw-light" id="saving-amount">0.0</span> </h4>
+                                    <h4 class="text-start mb-2">Remaining Balance : $ <span class="fw-light" id="second-balance">0.0</span> </h4>
+                                </div>
                             </div>
-                            <div class="col-12 py-2">
-                                <h4 class="text-start mb-2">Saving Amount : $ <span class="fw-light" id="saving-amount">0.0</span> </h4>
-                                <h4 class="text-start mb-2">Remaining Balance : $ <span class="fw-light" id="second-balance">0.0</span> </h4>
-                            </div>
+                            <!-- bonus Part end  -->
+
                         </div>
                     </div>
                 </div>
